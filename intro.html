@@ -23,6 +23,7 @@
       color: #fff;
       text-align: center;
       position: relative;
+      cursor: none;
     }
 
     /* Animated background particles */
@@ -53,17 +54,20 @@
     }
 
     .typing-line {
-      font-size: 28px;
+      font-size: clamp(16px, 4vw, 28px);
       font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden;
+      white-space: normal;
+      overflow: visible;
       border-right: 3px solid #ff69b4;
       width: 0;
-      margin: 20px auto;
+      margin: 15px auto;
       animation: none;
       letter-spacing: 1px;
-      display: inline-block;
+      display: block;
       max-width: 100%;
+      cursor: default;
+      text-align: center;
+      word-wrap: break-word;
     }
 
     #line1 {
@@ -76,13 +80,13 @@
 
     #line3 {
       color: #ff69b4;
-      font-size: 32px;
+      font-size: clamp(18px, 5vw, 32px);
       font-weight: 700;
     }
 
     #line4 {
       color: #ffd700;
-      font-size: 30px;
+      font-size: clamp(17px, 4.5vw, 30px);
       font-weight: 600;
       text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
     }
@@ -91,8 +95,8 @@
       margin-top: 40px;
       background: linear-gradient(135deg, #ff1493, #ff69b4, #ffb3d9);
       color: #fff;
-      padding: 16px 40px;
-      font-size: 20px;
+      padding: clamp(12px, 3vw, 16px) clamp(25px, 6vw, 40px);
+      font-size: clamp(14px, 3.5vw, 20px);
       font-weight: 600;
       border: none;
       border-radius: 50px;
@@ -101,7 +105,7 @@
       transition: all 0.4s ease;
       opacity: 0;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: clamp(1px, 0.3vw, 2px);
       position: relative;
       overflow: hidden;
     }
@@ -219,51 +223,41 @@
 
     @media (max-width: 768px) {
       .container {
-        padding: 30px 15px;
+        padding: 25px 15px;
         width: 95%;
+        border-radius: 20px;
       }
 
       .typing-line {
-        font-size: 18px;
-        white-space: normal;
-        word-wrap: break-word;
-      }
-      
-      #line3 {
-        font-size: 20px;
-      }
-      
-      #line4 {
-        font-size: 19px;
+        margin: 12px auto;
       }
 
       .btn {
-        font-size: 14px;
-        padding: 12px 25px;
-        letter-spacing: 1px;
+        margin-top: 30px;
+      }
+
+      .butterfly {
+        font-size: 30px;
       }
     }
 
     @media (max-width: 480px) {
       .container {
-        padding: 20px 10px;
+        padding: 20px 12px;
+        border-radius: 15px;
       }
 
       .typing-line {
-        font-size: 16px;
-      }
-
-      #line3 {
-        font-size: 18px;
-      }
-
-      #line4 {
-        font-size: 17px;
+        margin: 10px auto;
+        letter-spacing: 0.5px;
       }
 
       .btn {
-        font-size: 13px;
-        padding: 10px 20px;
+        margin-top: 25px;
+      }
+
+      .butterfly {
+        font-size: 25px;
       }
     }
   </style>
