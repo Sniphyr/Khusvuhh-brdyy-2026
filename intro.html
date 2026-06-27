@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Birthday Surprise</title>
+
   <style>
     * {
       margin: 0;
@@ -16,132 +17,103 @@
       min-height: 100vh;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      color: #fff;
       text-align: center;
       position: relative;
-      cursor: none;
+      overflow-x: hidden;
+      padding: 20px;
+      color: #fff;
     }
 
-    /* Animated background particles */
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(255,105,180,0.8), rgba(255,105,180,0));
-      pointer-events: none;
-      animation: float 6s infinite ease-in-out;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
-      50% { opacity: 1; }
-    }
-
+    /* ===== Container ===== */
     .container {
       z-index: 10;
+      width: min(90%, 800px);
       padding: 40px 20px;
       background: rgba(255, 255, 255, 0.03);
       backdrop-filter: blur(10px);
       border-radius: 30px;
       border: 1px solid rgba(255, 105, 180, 0.2);
-      box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.15);
-      max-width: 800px;
-      width: 90%;
-      margin: 0 auto;
+      box-shadow: 0 8px 32px rgba(255, 105, 180, 0.15);
     }
 
+    /* ===== Typing Lines ===== */
     .typing-line {
-      font-size: 28px;
       font-weight: 500;
-      white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid #ff69b4;
+      border-right: 3px solid transparent;
       width: 0;
       margin: 20px auto;
-      animation: none;
+      display: block;
+      min-height: 40px;
+
+      font-size: clamp(16px, 4vw, 28px);
+      white-space: nowrap;
       letter-spacing: 1px;
-      display: inline-block;
-      max-width: 100%;
-      cursor: default;
-    }
-
-    #line1 {
-      color: #fff;
-    }
-
-    #line2 {
-      color: #ffb3d9;
     }
 
     #line3 {
-      color: #ff69b4;
-      font-size: 32px;
+      font-size: clamp(20px, 5vw, 32px);
       font-weight: 700;
+      color: #ff69b4;
     }
 
     #line4 {
-      color: #ffd700;
-      font-size: 30px;
+      font-size: clamp(18px, 4.5vw, 30px);
       font-weight: 600;
+      color: #ffd700;
       text-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
     }
 
+    /* ===== Button ===== */
     .btn {
       margin-top: 40px;
       background: linear-gradient(135deg, #ff1493, #ff69b4, #ffb3d9);
       color: #fff;
       padding: 16px 40px;
-      font-size: 20px;
+      font-size: clamp(14px, 3vw, 20px);
       font-weight: 600;
       border: none;
       border-radius: 50px;
       cursor: pointer;
-      box-shadow: 0 0 30px rgba(255, 105, 180, 0.6), 0 5px 15px rgba(0, 0, 0, 0.3);
-      transition: all 0.4s ease;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.6);
+      transition: 0.4s ease;
       opacity: 0;
-      text-transform: uppercase;
       letter-spacing: 2px;
       position: relative;
       overflow: hidden;
     }
 
-    .btn::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-      transition: left 0.5s;
-    }
-
-    .btn:hover::before {
-      left: 100%;
-    }
-
     .btn:hover {
-      transform: scale(1.1) translateY(-3px);
-      box-shadow: 0 0 50px rgba(255, 105, 180, 0.9), 0 10px 25px rgba(0, 0, 0, 0.4);
+      transform: scale(1.08);
     }
 
-    .btn:active {
-      transform: scale(1.05) translateY(-1px);
-    }
-
+    /* ===== Animations ===== */
     @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
+      from { width: 0; }
+      to { width: 100%; }
     }
 
-    @keyframes blink {
-      50% { border-color: transparent }
+    @keyframes sparkle {
+      0%,100% { opacity: 0; transform: scale(0); }
+      50% { opacity: 1; transform: scale(1); }
     }
 
-    /* Sparkle effect */
+    @keyframes float {
+      0%,100% { transform: translateY(0); opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    /* ===== Effects ===== */
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,105,180,0.8), transparent);
+      animation: float 6s infinite ease-in-out;
+      pointer-events: none;
+    }
+
     .sparkle {
       position: absolute;
       width: 3px;
@@ -152,17 +124,11 @@
       animation: sparkle 2s infinite;
     }
 
-    @keyframes sparkle {
-      0%, 100% { opacity: 0; transform: scale(0); }
-      50% { opacity: 1; transform: scale(1); }
-    }
-
-    /* Butterfly styles */
     .butterfly {
       position: absolute;
       font-size: 40px;
       pointer-events: none;
-      filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.5));
+      filter: drop-shadow(0 0 10px rgba(255,105,180,0.5));
       animation: flutter 2s infinite ease-in-out;
     }
 
@@ -172,197 +138,117 @@
     }
 
     @keyframes flutter {
-      0%, 100% {
-        transform: scale(1) rotate(0deg);
-      }
-      25% {
-        transform: scale(1.1) rotate(-5deg);
-      }
-      75% {
-        transform: scale(0.9) rotate(5deg);
-      }
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
     }
 
-    @keyframes flyButterfly {
-      0% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-      10% {
-        transform: translate(-150px, 100px) rotate(-20deg);
-      }
-      20% {
-        transform: translate(100px, -80px) rotate(15deg);
-      }
-      30% {
-        transform: translate(-200px, -150px) rotate(-25deg);
-      }
-      40% {
-        transform: translate(250px, 50px) rotate(20deg);
-      }
-      50% {
-        transform: translate(-100px, -200px) rotate(-15deg);
-      }
-      60% {
-        transform: translate(180px, 120px) rotate(25deg);
-      }
-      70% {
-        transform: translate(-250px, -50px) rotate(-20deg);
-      }
-      80% {
-        transform: translate(150px, -120px) rotate(10deg);
-      }
-      90% {
-        transform: translate(-80px, 80px) rotate(-10deg);
-      }
-      100% {
-        transform: translate(0, 0) rotate(0deg);
-      }
-    }
+   @keyframes flyButterfly {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(calc(80px * var(--x1)), -60px);
+  }
+  40% {
+    transform: translate(calc(-120px * var(--x2)), 90px);
+  }
+  60% {
+    transform: translate(100px, calc(120px * var(--y1)));
+  }
+  80% {
+    transform: translate(calc(-90px * var(--x2)), -110px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
 
-    @media (max-width: 768px) {
-      .container {
-        padding: 30px 15px;
-        width: 95%;
-      }
-
-      .typing-line {
-        font-size: 18px;
-        white-space: normal;
-        word-wrap: break-word;
-      }
-      
-      #line3 {
-        font-size: 20px;
-      }
-      
-      #line4 {
-        font-size: 19px;
-      }
-
-      .btn {
-        font-size: 14px;
-        padding: 12px 25px;
-        letter-spacing: 1px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .container {
-        padding: 20px 10px;
-      }
-
-      .typing-line {
-        font-size: 16px;
-      }
-
-      #line3 {
-        font-size: 18px;
-      }
-
-      #line4 {
-        font-size: 17px;
-      }
-
-      .btn {
-        font-size: 13px;
-        padding: 10px 20px;
-      }
-    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
-    <div id="line1" class="typing-line">Heyy Yooo </div>
+    <div id="line1" class="typing-line">Heyy Yooo</div>
     <div id="line2" class="typing-line">It's not just a normal day...</div>
     <div id="line3" class="typing-line">Hepppyy Borthdayy Baunii 😁</div>
     <div id="line4" class="typing-line"></div>
 
-    <button class="btn" onclick="location.href='home.html'" id="btn">Aage Janna Hai?? 💥</button>
+    <button class="btn" id="btn" onclick="location.href='home.html'">
+      Aage Janna Hai?? 💥
+    </button>
   </div>
 
   <script>
-    // Create floating particles
+    const isMobile = window.innerWidth < 768;
+
     function createParticle() {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      
-      const size = Math.random() * 80 + 20;
-      particle.style.width = size + 'px';
-      particle.style.height = size + 'px';
-      particle.style.left = Math.random() * 100 + '%';
-      particle.style.top = Math.random() * 100 + '%';
-      particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
-      particle.style.animationDelay = Math.random() * 2 + 's';
-      
-      document.body.appendChild(particle);
+      const p = document.createElement("div");
+      p.className = "particle";
+      const size = Math.random() * 60 + 20;
+      p.style.width = size + "px";
+      p.style.height = size + "px";
+      p.style.left = Math.random() * 100 + "%";
+      p.style.top = Math.random() * 100 + "%";
+      document.body.appendChild(p);
     }
 
-    // Create sparkles
     function createSparkle() {
-      const sparkle = document.createElement('div');
-      sparkle.className = 'sparkle';
-      sparkle.style.left = Math.random() * 100 + '%';
-      sparkle.style.top = Math.random() * 100 + '%';
-      sparkle.style.animationDelay = Math.random() * 2 + 's';
-      document.body.appendChild(sparkle);
+      const s = document.createElement("div");
+      s.className = "sparkle";
+      s.style.left = Math.random() * 100 + "%";
+      s.style.top = Math.random() * 100 + "%";
+      document.body.appendChild(s);
     }
 
-    // Create butterflies
     function createButterfly() {
-      const container = document.createElement('div');
-      container.className = 'butterfly-container';
-      container.style.left = Math.random() * 80 + 10 + '%';
-      container.style.top = Math.random() * 80 + 10 + '%';
-      container.style.animationDuration = (Math.random() * 15 + 25) + 's';
-      container.style.animationDelay = Math.random() * 5 + 's';
+  const c = document.createElement("div");
+  c.className = "butterfly-container";
 
-      const butterfly = document.createElement('div');
-      butterfly.className = 'butterfly';
-      butterfly.textContent = '🦋';
+  c.style.left = Math.random() * 80 + 10 + "%";
+  c.style.top = Math.random() * 80 + 10 + "%";
 
-      container.appendChild(butterfly);
-      document.body.appendChild(container);
-    }
+  // ⭐ ADD THIS (IMPORTANT)
+  c.style.setProperty("--x1", Math.random() > 0.5 ? 1 : -1);
+  c.style.setProperty("--x2", Math.random() > 0.5 ? 1 : -1);
+  c.style.setProperty("--y1", Math.random() > 0.5 ? 1 : -1);
 
-    // Generate particles and sparkles
-    for (let i = 0; i < 15; i++) {
-      createParticle();
-    }
+  const b = document.createElement("div");
+  b.className = "butterfly";
+  b.textContent = "🦋";
 
-    for (let i = 0; i < 30; i++) {
-      createSparkle();
-    }
+  c.appendChild(b);
+  document.body.appendChild(c);
+}
 
-    for (let i = 0; i < 15; i++) {
-      createButterfly();
-    }
 
-    // Typing animation function
+    const particleCount = isMobile ? 6 : 15;
+const sparkleCount = isMobile ? 58 : 80;
+const butterflyCount = isMobile ? 10 : 15;
+
+
+    for (let i = 0; i < particleCount; i++) createParticle();
+    for (let i = 0; i < sparkleCount; i++) createSparkle();
+    for (let i = 0; i < butterflyCount; i++) createButterfly();
+
     function typeLine(id, delay) {
       setTimeout(() => {
-        const line = document.getElementById(id);
-        line.style.animation = "typing 2.5s steps(40, end) forwards";
-        setTimeout(() => {
-          line.style.borderRight = 'none';
-        }, 2500);
+        const el = document.getElementById(id);
+        el.style.animation = "typing 2.5s steps(40,end) forwards";
+        setTimeout(() => el.style.borderRight = "none", 2500);
       }, delay);
     }
 
-    // Show button with fade in
     function showButton(delay) {
       setTimeout(() => {
-        const btn = document.getElementById('btn');
-        btn.style.transition = 'opacity 1s ease';
-        btn.style.opacity = 1;
+        document.getElementById("btn").style.opacity = 1;
       }, delay);
     }
 
-    // Typing sequence
-    typeLine('line1', 0);
-    typeLine('line2', 3000);
-    typeLine('line3', 6000);
-    typeLine('line4', 9000);
+    typeLine("line1", 0);
+    typeLine("line2", 3000);
+    typeLine("line3", 6000);
+    typeLine("line4", 9000);
     showButton(12000);
   </script>
 
