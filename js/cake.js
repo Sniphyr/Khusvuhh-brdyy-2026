@@ -84,7 +84,7 @@
 
     // Step 1 — type heading after short pause
     setTimeout(() => {
-      typeWriter(headingEl, '🎂 Make a Wish...', 68, () => {
+      typeWriter(headingEl, '🎂 Wish Maangg!!', 68, () => {
 
         // Step 2 — subtitle fades visible then types
         subtitleEl.classList.add('visible');
