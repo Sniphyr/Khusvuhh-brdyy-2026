@@ -179,7 +179,12 @@ Happy Birthday 💜`;
     // 4. After all memories, show letter
     const lastDelay = MEMORIES[MEMORIES.length - 1].startDelay + 2200;
     setTimeout(() => {
-      showFinalLetter();
+      document.getElementById('next-btn').classList.add('show');
+      document.getElementById('next-btn').addEventListener('click', () => {
+    document.getElementById('next-btn').style.display = 'none';
+    showFinalLetter();
+});
+
     }, lastDelay);
   }
 
