@@ -1,0 +1,302 @@
+/* ═══════════════════════════════════════
+   GIFT ROOM — gift.css
+   Premium Birthday Experience
+═══════════════════════════════════════ */
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%; height: 100%;
+  overflow: hidden;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background: #0d0818;
+  color: #fff;
+  touch-action: none;
+  user-select: none;
+}
+
+/* ── Background overlay (darkens on click 2) ── */
+#bg-overlay {
+  position: fixed; inset: 0;
+  background: radial-gradient(ellipse at 50% 40%, #1e0a3c 0%, #0d0818 65%);
+  transition: background 1.2s ease, filter 1s ease;
+  z-index: 0;
+}
+#bg-overlay.darker {
+  background: radial-gradient(ellipse at 50% 40%, #0f0520 0%, #060210 70%);
+  filter: brightness(0.7);
+}
+
+/* vignette */
+#bg-overlay::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.8) 100%);
+  pointer-events: none;
+}
+
+/* ── Stars ── */
+#stars {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 1;
+}
+.star {
+  position: absolute;
+  width: 2px; height: 2px;
+  background: #fff;
+  border-radius: 50%;
+  animation: starTwinkle var(--sd, 4s) ease-in-out infinite alternate;
+  opacity: 0.5;
+}
+@keyframes starTwinkle {
+  0%   { opacity: 0.15; transform: scale(0.7); }
+  100% { opacity: 0.9;  transform: scale(1.4); }
+}
+
+/* ── Fairy Lights ── */
+#fairy-lights {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: 7vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 0.5vh;
+  z-index: 3;
+  transition: filter 0.8s ease;
+}
+#fairy-lights.bright { filter: brightness(1.8) saturate(1.4); }
+.wire {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, rgba(255,210,80,0.25), transparent);
+}
+.bulb {
+  width: clamp(6px,1.1vw,11px);
+  height: clamp(9px,1.7vw,17px);
+  border-radius: 50% 50% 40% 40%;
+  position: relative;
+  animation: bulbGlow var(--bd, 3s) ease-in-out infinite alternate;
+  box-shadow: 0 0 8px var(--bc), 0 0 18px var(--bc);
+}
+.bulb::before {
+  content: '';
+  position: absolute; top: -4px; left: 50%; transform: translateX(-50%);
+  width: 3px; height: 5px;
+  background: rgba(160,160,160,0.35);
+  border-radius: 2px 2px 0 0;
+}
+@keyframes bulbGlow {
+  0%   { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+
+/* ── Floating Particles ── */
+#particle-field {
+  position: fixed; inset: 0;
+  pointer-events: none; z-index: 2;
+  overflow: hidden;
+}
+.spark {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--sc, rgba(167,139,250,0.5));
+  width: var(--ss, 4px); height: var(--ss, 4px);
+  bottom: -10px;
+  animation: sparkFloat var(--sf, 9s) linear infinite;
+  animation-delay: var(--sfd, 0s);
+  opacity: 0;
+}
+@keyframes sparkFloat {
+  0%   { opacity: 0; transform: translateY(0) scale(1) rotate(0); }
+  8%   { opacity: 0.8; }
+  90%  { opacity: 0.3; }
+  100% { opacity: 0; transform: translateY(-110vh) scale(0.3) rotate(360deg); }
+}
+
+/* ── Scene ── */
+#scene {
+  position: fixed; inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  gap: clamp(16px, 3.5vh, 36px);
+}
+
+/* ── Gift Wrap ── */
+#gift-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* ── Glow Halo ── */
+#gift-glow {
+  position: absolute;
+  width: clamp(180px, 35vw, 380px);
+  height: clamp(180px, 35vw, 380px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(139,92,246,0.35) 0%, transparent 70%);
+  animation: haloBreath 2.8s ease-in-out infinite alternate;
+  pointer-events: none;
+  transition: background 0.8s ease, transform 0.8s ease;
+}
+@keyframes haloBreath {
+  0%   { transform: scale(0.92); opacity: 0.6; }
+  100% { transform: scale(1.08); opacity: 1; }
+}
+#gift-glow.bright {
+  background: radial-gradient(circle, rgba(253,230,138,0.55) 0%, rgba(139,92,246,0.2) 55%, transparent 75%);
+  transform: scale(1.3);
+}
+
+/* ── Gift Box ── */
+#gift-box {
+  position: relative;
+  width: clamp(140px, 25vw, 260px);
+  animation: giftIdle 3.5s ease-in-out infinite;
+  transition: transform 0.3s ease;
+}
+#gift-box svg { width: 100%; height: auto; }
+
+@keyframes giftIdle {
+  0%,100% { transform: translateY(0) rotate(0deg); }
+  25%      { transform: translateY(-8px) rotate(0.5deg); }
+  75%      { transform: translateY(-4px) rotate(-0.5deg); }
+}
+
+/* Shake state */
+#gift-box.shake {
+  animation: giftShake 0.55s cubic-bezier(.36,.07,.19,.97);
+}
+@keyframes giftShake {
+  0%,100% { transform: rotate(0); }
+  15%  { transform: rotate(-4deg); }
+  30%  { transform: rotate(4deg); }
+  45%  { transform: rotate(-3deg); }
+  60%  { transform: rotate(3deg); }
+  75%  { transform: rotate(-1.5deg); }
+  90%  { transform: rotate(1deg); }
+}
+
+/* Zoom state */
+#gift-box.zooming {
+  animation: giftZoom 1.4s cubic-bezier(.22,1,.36,1) forwards;
+}
+@keyframes giftZoom {
+  0%   { transform: scale(1); }
+  100% { transform: scale(1.18); }
+}
+
+/* ── Lid open animation ── */
+#lid-anim {
+  display: none;
+  position: absolute;
+  top: 0; left: 0; right: 0;
+}
+
+/* ── Butterflies ── */
+#butterflies {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 15;
+  overflow: hidden;
+}
+.butterfly {
+  position: absolute;
+  font-size: clamp(14px, 2.5vw, 24px);
+  opacity: 0;
+  animation: butterflyFly var(--bf-dur, 3s) ease-out var(--bf-del, 0s) forwards;
+}
+@keyframes butterflyFly {
+  0%   { opacity: 0; transform: translate(0,0) scale(0.5) rotate(0); }
+  10%  { opacity: 1; }
+  80%  { opacity: 0.8; }
+  100% { opacity: 0; transform: translate(var(--bf-tx,50px), var(--bf-ty,-150px)) scale(1.2) rotate(var(--bf-rot,20deg)); }
+}
+
+/* ── Golden Burst ── */
+#golden-burst {
+  position: fixed; inset: 0;
+  pointer-events: none;
+  z-index: 20;
+  background: radial-gradient(ellipse at center, rgba(253,230,138,0) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+#golden-burst.explode {
+  animation: goldenExplode 2.2s ease-out forwards;
+}
+@keyframes goldenExplode {
+  0%   { opacity: 0; background: radial-gradient(ellipse at center, rgba(253,230,138,0.0) 0%, transparent 40%); }
+  15%  { opacity: 1; background: radial-gradient(ellipse at center, rgba(255,245,180,0.9) 0%, rgba(253,186,80,0.6) 35%, transparent 65%); }
+  60%  { opacity: 1; background: radial-gradient(ellipse at center, rgba(255,251,220,1) 0%, rgba(253,200,100,0.8) 50%, transparent 80%); }
+  100% { opacity: 1; background: radial-gradient(ellipse at center, rgba(255,253,240,1) 0%, rgba(255,245,180,1) 100%); }
+}
+
+/* ── Gift Text ── */
+#gift-text-wrap {
+  position: relative; z-index: 12;
+  text-align: center;
+}
+#gift-text {
+  font-size: clamp(1rem, 2.8vw, 1.6rem);
+  color: rgba(233,213,255,0.9);
+  letter-spacing: 0.06em;
+  font-style: italic;
+  text-shadow: 0 0 20px rgba(167,139,250,0.5);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  animation: textGlow 3s ease-in-out infinite alternate;
+}
+@keyframes textGlow {
+  0%   { text-shadow: 0 0 12px rgba(167,139,250,0.4); }
+  100% { text-shadow: 0 0 28px rgba(196,181,253,0.8), 0 0 50px rgba(139,92,246,0.3); }
+}
+#gift-text.fade-out { opacity: 0; transform: translateY(-8px); }
+
+/* ── Escape particles (click 1) ── */
+.escape-particle {
+  position: fixed;
+  width: clamp(4px,0.8vw,8px); height: clamp(4px,0.8vw,8px);
+  border-radius: 50%;
+  background: var(--epc, #a78bfa);
+  pointer-events: none;
+  z-index: 18;
+  opacity: 0;
+  animation: escapeOut var(--ep-dur,1s) ease-out var(--ep-del,0s) forwards;
+}
+@keyframes escapeOut {
+  0%   { opacity: 1; transform: translate(0,0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--ep-tx,60px),var(--ep-ty,-80px)) scale(0.2); }
+}
+
+/* ── Transition overlay ── */
+#transition-overlay {
+  position: fixed; inset: 0;
+  background: rgba(255,248,200,1);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  transition: opacity 1.4s ease;
+}
+#transition-overlay.active { opacity: 1; pointer-events: auto; }
+
+/* ── Paper particles (click 3) ── */
+.paper-bit {
+  position: fixed;
+  width: clamp(8px,1.5vw,16px); height: clamp(6px,1vw,12px);
+  border-radius: 2px;
+  background: var(--pb-col, rgba(233,213,255,0.7));
+  pointer-events: none;
+  z-index: 19;
+  opacity: 0;
+  animation: paperDrift var(--pb-dur,2s) ease-out var(--pb-del,0s) forwards;
+}
+@keyframes paperDrift {
+  0%   { opacity: 0.9; transform: translate(0,0) rotate(0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--pb-tx,40px),var(--pb-ty,-120px)) rotate(var(--pb-rot,180deg)) scale(0.4); }
+}
