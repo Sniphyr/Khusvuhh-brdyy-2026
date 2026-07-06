@@ -15,7 +15,7 @@
       caption : 'Once upon a time... a little princess was born. 👶🎂',
       tape    : 'top-left',
       clip    : 'right',
-      startDelay: 1400,   // ms after entry glow fades
+      startDelay: 2200,   // ms after entry glow fades
       flyFrom : { x: 0,    y: 200,   rot: -15 },
       landRot : -2,
       hoverRot: -3,
@@ -27,7 +27,7 @@
       caption : 'Partners in crime since day one. ❤️',
       tape    : 'top-right',
       clip    : 'left',
-      startDelay: 2800,
+      startDelay: 3600,
       flyFrom : { x: 200,  y: 150,   rot: 12 },
       landRot : 2,
       hoverRot: 3,
