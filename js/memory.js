@@ -11,7 +11,7 @@
   const MEMORIES = [
     {
       id      : 'slot-1',
-      src     : './4.png',
+      src     : './1.png',
       caption : 'Once upon a time... a little princess was born. 👶🎂',
       tape    : 'top-left',
       clip    : 'right',
