@@ -48,7 +48,7 @@
     },
     {
       id      : 'slot-4',
-      src     : '4.png.jpg',
+      src     : '4.png',
       caption : 'Cuteness level: 999+ 😼💜',
       tape    : 'bottom-right',
       clip    : 'right',
