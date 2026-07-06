@@ -11,7 +11,7 @@
   const MEMORIES = [
     {
       id      : 'slot-1',
-      src     : 'images/photos/baby-birthday-poster.jpg',
+      src     : '1.png',
       caption : 'Once upon a time... a little princess was born. 👶🎂',
       tape    : 'top-left',
       clip    : 'right',
@@ -23,7 +23,7 @@
     },
     {
       id      : 'slot-2',
-      src     : 'images/photos/childhood-together.jpg',
+      src     : '2.png',
       caption : 'Partners in crime since day one. ❤️',
       tape    : 'top-right',
       clip    : 'left',
@@ -35,7 +35,7 @@
     },
     {
       id      : 'slot-3',
-      src     : 'images/photos/bw-selfie.jpg',
+      src     : '3.png',
       caption : 'Elegance never goes out of style. 🖤',
       tape    : 'bottom-left',
       clip    : 'top',
@@ -48,7 +48,7 @@
     },
     {
       id      : 'slot-4',
-      src     : 'images/photos/cat-filter-selfie.jpg',
+      src     : '4.png.jpg',
       caption : 'Cuteness level: 999+ 😼💜',
       tape    : 'bottom-right',
       clip    : 'right',
