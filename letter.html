@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>💜 A Letter For You</title>
+  <link rel="stylesheet" href="css/letter.css"/>
+</head>
+<body>
+
+  <!-- Atmosphere -->
+  <div id="scene-bg"></div>
+  <div id="stars"></div>
+  <div id="fairy-lights"><div class="wire"></div></div>
+  <div id="particles"></div>
+  <div id="butterflies"></div>
+
+  <!-- ENVELOPE STAGE -->
+  <div id="envelope-stage">
+
+    <div id="envelope" title="Tap to open">
+      <!-- Envelope body -->
+      <div id="env-body">
+        <!-- Back flap (behind) -->
+        <div id="env-back-flap"></div>
+
+        <!-- Side triangles -->
+        <div id="env-left"></div>
+        <div id="env-right"></div>
+        <div id="env-bottom"></div>
+
+        <!-- Front flap (top, opens upward) -->
+        <div id="env-flap">
+          <div id="wax-seal">
+            <div id="seal-inner">💜</div>
+          </div>
+        </div>
+
+        <!-- Label on envelope -->
+        <div id="env-label">
+          <span id="env-for">💜 For You</span>
+          <span id="env-tap">Tap to Open</span>
+        </div>
+      </div>
+
+      <!-- Sparkles burst -->
+      <div id="seal-sparkles"></div>
+    </div>
+
+  </div>
+
+  <!-- LETTER STAGE (hidden initially) -->
+  <div id="letter-stage">
+
+    <div id="letter-paper">
+      <!-- Paper decorations -->
+      <div class="paper-corner paper-corner--tl">✿</div>
+      <div class="paper-corner paper-corner--tr">✿</div>
+      <div class="paper-line-rules"></div>
+
+      <!-- Letter content -->
+      <div id="letter-content">
+        <p id="letter-body"></p>
+      </div>
+
+      <!-- Signature area -->
+      <div id="signature-wrap">
+        <div id="signature"></div>
+        <div id="sig-heart">🤍</div>
+      </div>
+
+      <!-- Final button -->
+      <div id="final-btn-wrap">
+        <button id="final-btn">🎆 Final Surprise</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/letter.js"></script>
+</body>
+</html>
