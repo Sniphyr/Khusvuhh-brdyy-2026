@@ -89,7 +89,7 @@
         // Step 2 — subtitle fades visible then types
         subtitleEl.classList.add('visible');
         setTimeout(() => {
-          typeWriter(subtitleEl, 'Every birthday deserves a little magic. 💜', 45, () => {
+          typeWriter(subtitleEl, 'Ab Bolna Matt "Iski kyy Jarurat hai" 👀', 45, () => {
 
             // Step 3 — candle hint fades in
             setTimeout(() => {
