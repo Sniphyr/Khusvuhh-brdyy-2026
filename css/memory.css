@@ -182,9 +182,9 @@ html, body {
 .polaroid img {
   display: block;
   width: 100%;
-  height: clamp(80px, 16vh, 180px);
+  height: clamp(100px, 18vh, 200px);
   object-fit: cover;
-  object-position: center top;
+  object-position: center 20%;
   border-radius: 1px;
   filter: saturate(0.9) contrast(1.05);
 }
