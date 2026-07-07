@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>💜 Happy Birthday, Baunii</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Poppins:ital,wght@0,300;0,400;1,300&family=Caveat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/final.css"/>
+</head>
+<body>
+
+  <!-- ── Atmospheric layers ── -->
+  <div id="final-bg"></div>
+  <div id="galaxy"></div>
+  <div id="stars"></div>
+  <div id="fairy-lights"><div class="wire"></div></div>
+  <div id="particles"></div>
+  <div id="fireflies"></div>
+  <div id="butterflies"></div>
+
+  <!-- ── Ghost memory photos (floating behind) ── -->
+  <div id="memory-photos">
+    <img class="ghost-photo" id="gp1" src="./1.png" alt="" draggable="false"/>
+    <img class="ghost-photo" id="gp2" src="./2.png" alt="" draggable="false"/>
+    <img class="ghost-photo" id="gp3" src="./3.png" alt="" draggable="false"/>
+    <img class="ghost-photo" id="gp4" src="./4.png" alt="" draggable="false"/>
+  </div>
+
+  <!-- ── Main content ── -->
+  <div id="content">
+
+    <!-- Heading -->
+    <h1 id="main-heading">🎂 Happy Birthday, Baunii!! 🤍</h1>
+
+    <!-- Message paragraphs — revealed one by one via JS -->
+    <div id="message-wrap">
+      <p class="msg-line" data-delay="0">I hope this little surprise made you smile.</p>
+      <p class="msg-line" data-delay="1100">Maybe it wasn't perfect...</p>
+      <p class="msg-line" data-delay="2100">But every page...</p>
+      <p class="msg-line" data-delay="3000">Every animation...</p>
+      <p class="msg-line" data-delay="3800">Every transition...</p>
+      <p class="msg-line" data-delay="4600">Every tiny detail...</p>
+      <p class="msg-line" data-delay="5600">was made with only one intention...</p>
+      <p class="msg-line highlight" data-delay="6800">To make your birthday a little more special. 🤍</p>
+
+      <div class="msg-spacer"></div>
+
+      <p class="msg-line" data-delay="8200">Thank you...</p>
+      <p class="msg-line" data-delay="9000">For every laugh.</p>
+      <p class="msg-line" data-delay="9800">For every conversation.</p>
+      <p class="msg-line" data-delay="10600">For every memory.</p>
+
+      <div class="msg-spacer"></div>
+
+      <p class="msg-line" data-delay="11800">Stay happy.</p>
+      <p class="msg-line" data-delay="12500">Keep smiling.</p>
+      <p class="msg-line" data-delay="13300">And please...</p>
+      <p class="msg-line highlight" data-delay="14200">Don't overthink too much. 🤍</p>
+    </div>
+
+    <!-- Signature -->
+    <div id="signature-block">
+      <p id="sig-made">Made Especially For You 🤍</p>
+      <p id="sig-name">— Ez</p>
+    </div>
+
+    <!-- PS note -->
+    <p id="ps-note">P.S. — Thank you for being my best friend. 🤍</p>
+
+  </div>
+
+  <!-- One Last Thing button -->
+  <div id="last-btn-wrap">
+    <button id="last-btn">🌸 One Last Thing...</button>
+  </div>
+
+  <!-- Cinematic fade to black -->
+  <div id="fade-black"></div>
+
+  <script src="js/final.js"></script>
+</body>
+</html>
