@@ -67,7 +67,7 @@
 But the best memories are
 still waiting to happen.
 
-Happy Birthday 💜`;
+Happy Birthday ✨`;
 
   /* ════════════════════════════════════
      BUILD AMBIENT ENVIRONMENT
