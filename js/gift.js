@@ -105,7 +105,7 @@
     setTimeout(() => {
       giftText.classList.add('fade-out');
       setTimeout(() => {
-        giftText.textContent = 'Hmm... Something magical is inside... ✨';
+        giftText.textContent = 'Hmm..Hmmm...';
         giftText.classList.remove('fade-out');
       }, 500);
     }, 300);
@@ -149,7 +149,7 @@
     setTimeout(() => {
       giftText.classList.add('fade-out');
       setTimeout(() => {
-        giftText.textContent = 'The magic is about to be revealed... 💜';
+        giftText.textContent = 'Yea Last Haii 😂';
         giftText.classList.remove('fade-out');
       }, 500);
     }, 400);
