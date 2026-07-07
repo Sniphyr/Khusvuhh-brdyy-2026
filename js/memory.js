@@ -35,7 +35,7 @@
     },
     {
       id      : 'slot-3',
-      src     : './3.png',
+      src     : './13.png',
       caption : 'Elegance never goes out of style. 🖤',
       tape    : 'bottom-left',
       clip    : 'top',

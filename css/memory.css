@@ -518,3 +518,6 @@ html, body {
 #next-btn.show{
   opacity: 1;
 }
+#slot-3 .polaroid img {
+  object-position: center center;
+}
