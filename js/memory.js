@@ -12,7 +12,7 @@
     {
       id      : 'slot-1',
       src     : './1.png',
-      caption : 'Once upon a time... a little princess was born. 👶🎂',
+      caption : 'Once upon a time... a Chotuu Don was born 😭',
       tape    : 'top-left',
       clip    : 'right',
       startDelay: 2200,   // ms after entry glow fades
@@ -24,7 +24,7 @@
     {
       id      : 'slot-2',
       src     : './2.png',
-      caption : 'Partners in crime since day one. ❤️',
+      caption : 'Professional troublemakers since day one 😎',
       tape    : 'top-right',
       clip    : 'left',
       startDelay: 3600,
@@ -36,7 +36,7 @@
     {
       id      : 'slot-3',
       src     : './13.png',
-      caption : 'Elegance never goes out of style. 🖤',
+      caption : 'Beauty with a little bit of paglpan 😂',
       tape    : 'bottom-left',
       clip    : 'top',
       startDelay: 4200,
@@ -49,7 +49,7 @@
     {
       id      : 'slot-4',
       src     : './4.png',
-      caption : 'Cuteness level: 999+ 😼💜',
+      caption : 'Cuteness level: 999+ 😼',
       tape    : 'bottom-right',
       clip    : 'right',
       startDelay: 5800,
@@ -62,12 +62,12 @@
   ];
 
   const LETTER_TEXT =
-`Every picture tells a story...
+`Chotuu Donn tohh haii tuu..
 
-But the best memories are
-still waiting to happen.
+but yaad rakhiyoo mujhse lambi
+naa hoo sktii tuu miitrr 😏
 
-Happy Birthday ✨`;
+Happy Don day Chotuu 😁`;
 
   /* ════════════════════════════════════
      BUILD AMBIENT ENVIRONMENT
