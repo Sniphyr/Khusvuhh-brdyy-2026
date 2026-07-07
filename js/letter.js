@@ -10,209 +10,179 @@
   ════════════════════════════════════ */
   const LETTER = `Heyyy yooo...
 
-Sabse pehle...
+Sbse pehle...
 
-Happy Happy Birthday, Baunii!! 🎂🤍
+Happy Happyy Birthday Baunii!! 🤍
 
-Pata hai... mujhe honestly nahi pata ye webpage tujhe kaisi lagi hogi. Syd achhi lagi hogi... syd kharab even tujhe laga hoga "ye pagal itni mehnat kyun kar raha tha?" 😂
+Pta hai... mujhe honestly nhi pta ye webpage tujhe kaisi lagi hogi Syd achhi lagi hogi... syd kharab even tujhe lga hoga "ye pgl itni mehnat kyun kr raha tha?" 😂
 
-Par jo bhi ho...
+Pr jo bhi ho
 
-Bas ek hi intention tha...
+Bs ek hi intention tha..
 
-Tuu Happy hoo jayee orr smile karee. 🤍
+Tuu Happy hoo jayee orr smile karee bss 
 
-Sach bolun to is webpage ke liye mere dimaag me bahut saare ideas aaye the. Kuch implement hi nahi kar paya, kuch time ki wajah se reh gaye, kuch confusion... pata nahi kya kya. 😭
+Sach bolun to is webpage ke liye mere dimaag me bht saare ideas aaye the Kuch implement hi nhi kr paya kuch time ki wajah se reh gaye kuch confusion... pta nhi kya kya. 😭
 
-Kabhi kuch error aa gaya...
+Kabhi kuch error aa jata
 
-Kabhi kuch kaam hi nahi kar raha tha...
+Kabhi kuch kaam hi nhi kr raha tha
 
-Kabhi ek cheez theek karta tha to dusri kharab ho jaati thi...
+Kabhi ek cheez thik krta tha toh dusri kharab ho jaati thi 😭
 
-But jaise taise karke complete kar hi diya.
+But jaise taise krke complete kr hi diya
 
-Bas tu smile kar dioo...
+Bs tu smile kar dioo...
 
 I'll be happy. 🤍
 
 Ykw...
 
-Jab BYJU'S ke time hamara group bana tha na...
+Jb BYJU'S ke time hamara group bana tha na
 
-Tab maine kabhi imagine bhi nahi kiya tha ki hum itne acche dost ban jayenge.
+Tb maine kabhi imagine bhi nhi kiya tha ki hum itne acche dost bn jayenge
 
-Aur haan...
+Orr haan...
 
-Ek confession... 😂
+Ek orr baat 😂
 
-Jab maine tujhe pehli baar text kiya tha na...
+Jb maine tujhe pehli baar text kiya tha na
 
-Main literally darr raha tha.
+Mai literally darr raha tha
 
-Har message bhejne se pehle do teen baar padhta tha ki kahin kuch galat na bol du.
+Har message bhejne se pehle do teen baar padhta tha ki kahi kuch galat na bol du
 
-Reply aane tak alag hi tension thinking rehti thi. 😭
+Reply aane tk alag hi tension thinking rehti thi 😭 pta nhi kyunn
 
-Aaj sochta hu toh hasi aati hai ki kis baat ka darr tha mujhe...
+Aaj sochta hu toh bht hasi aati h ki kisse dartaa thaa mai
 
 Yeaa Baunii... isse darun mai? 😂
 
-But darna padta tha...
+But anyways
 
-Chhota Don jo haii. 🙇🏻
+Chhotuu Donn on top 🙇🏻
 
-BYJU'S wala group...
+And wohh BYJU'S wala group hahhaa
 
-It was one of the best things that happened.
+It was one of the best things that happened
 
-Thank you yaar...
+Thannk youu yaar...
 
-Sach me...
+Sachii me
 
 Thank you so much. 🤍
 
-Main waise apni problems kisi ko easily batata hi nahi hun.
+Orr tohh Mai waise hi apni problems kisi ko easily batata nhi hu
 
-Pata nahi kyun...
+Pta nhi kyun 😭
 
-Shayad mujhe apni feelings express karna kabhi properly aaya hi nahi.
+Shyd mujhe apni feelings express krna kabhi properly aaya hi nhi I don't know
 
 Tere se itna close hu...
 
-But sab kuch andar hi rakhta rehta hu.
+But sb kuch andar hi rakhta rehta hu tujhe bhi nhi bta pata
 
-Mann karta hai sab bataun...
+Mann krta hai sb bataun...
 
-Par phir bhi nahi kar pata.
+but again wahii nhi krr pata 
 
-Aur uss time...
+but phir bhi uss time maine jitna bhi jo bhi bataya
 
-Tune meri baat suni.
+Tune meri baat suni
 
-Har baar solution dena zaruri nahi hota.
+Thank youu Sooo Muchh Yarr
 
-Kabhi sirf sun lena hi bahut hota hai.
+literally Thenkuuu 🤍
 
-And tune woh kiya.
+And tuu bhi bataya krr
 
-Kabhi kabhi main khud explain bhi nahi kar pata tha ki problem kya hai.
+Kuch bhi ho kuchhh bhii 
 
-Phir bhi tu samajh jaati thi.
+huu maii sunne ke liye
 
-Uske liye...
+Orr ek cheez...
 
-Thenkuuu. 🤍
+SORRRYY Yaarrr 😭
 
-Aur tu bhi bataya kar na apni problems...
+Agr maine kabhi tujhe hurt kiya ho
 
-Kuch bhi ho...
+Yaa kabhi meri kisi baat se tujhe bura laga ho
 
-Sunne ke liye...
+Yaa maine unknowingly kuch glt kiya ho
 
-Ya solution dene ke liye...
+Yaa kuch glt bol diya ho
 
-Main hamesha hu.
+Tohh genuinely...
 
-Aur ek cheez...
+I'm really Sorry 😭
 
-Sorry bhi.
-
-Agar maine kabhi tujhe hurt kiya ho...
-
-Kabhi meri kisi baat se tujhe bura laga ho...
-
-Ya maine unknowingly kuch galat kiya ho...
-
-Ya kuch galat bol diya ho...
-
-To genuinely...
-
-I'm really sorry. 😭🤍
-
-Aur haan...
+Orr haan
 
 Hostel wali baat...
 
-Uske liye bhi sorry yaar.
+Uske liye bhi sorry yaar
 
 Tu call karti thi...
 
-Aur mai receive hi nahi kar pata tha.
+Orr mai receive hi nhi kr pata thaa
 
-Aur obviously tujhe bura lagta hoga.
+and obviously tujhe bht bura lgta hoga
 
-Par believe me...
+Prr believe me...
 
-Mai ignore nahi karta tha.
+Mai ignore nhi krta tha
 
 Mai literally so jata hu. 😭😭
 
-Pata nahi kaise itni gehri neend aa jaati hai ki phone ki ring bhi nahi sunai deti.
+Pta nhi kaise itni gehri neend aa jaati hai ki phone ring bhi nhi sunai deti
 
-Kabhi kabhi subah uth ke dekhta tha to missed calls hoti thi...
+And jb subah uth ke phone check krta toh itni missed calls hoti thi
 
-Aur phir khud pe hi gussa aata tha.
+phir khud pe hi gussa aata thaa
 
 So...
 
-Sorry for that too. 🤍
+Sorry for that too 🤍
 
-Aur haannn...
+Orr haannn...
 
-Thank you meri itni saari bakchodi jhelne ke liye. 😂
+Thannk you meri itni saari bakchodi jhelne ke liye 😂
 
-Mere random messages...
+ptaa nhi ky ky boltaa
 
 Random overthinking...
 
 Random bakwaas...
 
-Sab tolerate karne ke liye. 😭
+Sb tolerate krne ke liye 😭
 
-Bas ek hi wish hai...
+Bs ek hi wish hai...
 
-Tu hamesha heppyy rehna.
+Tu hamesha heppyy rahnaa Baunii
 
-Aur please...
+Orr please...
 
-Jyada overthinking mat kar. 😭
+Jyada overthinking Nhii 😭
 
-Bas...
+Bs...
 
-Aur kya hi bolun.
+Aur kya hi bolun
 
-Is website me jo bhi hai...
+Pta nhii shyd bht kuch bol diya 
 
-Har animation...
-
-Har page...
-
-Har transition...
-
-Har chhoti si detail...
-
-Sirf isliye banayi hai...
-
-Taaki tera birthday thoda sa aur special ban sake.
+agr orr bola toh kahi yea site crash bhi na hoo jaye 😭
 
 Hopefully...
 
-Mission successful hua hoga. 😭😂
-
-Aur agar nahi hua...
-
-To next birthday par iska Version 2.0 bana dunga. 🤣
+Mission successful hua hoga 😭
 
 Happy Happy Birthday once again, Baunii!! 😁🤍
 
 Heppyy reh...
 
-Overthinking mat kar...
+Overthinking mat kar...`;
 
-Aur meri bakchodi lifetime jhelti reh. 😂🤍`;
-
-  const SIGNATURE = `— Tera pagal dost 😂🤍`;
+  /*const SIGNATURE = `— Tera Lambuu dost 😂`;*/
 
   /* ════════════════════════════════════
      HELPERS
